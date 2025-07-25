@@ -37,10 +37,7 @@ app.mount("/socket.io", socketio.ASGIApp(sio))
 # Configurar CORS (opcional, pero útil para desarrollo)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://alwexis-wavenet.vercel.app",
-        "http://localhost:3000"
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
