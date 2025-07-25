@@ -61,6 +61,11 @@ async def get_current_user(response: Response, authorization: Optional[str] = He
         return { "status": "error", "message": "BEARER Token not found" }
 
 #* Rutas normales
+@app.get("/keepalive")
+async def keepalive(response: Response):
+    response.status_code = status.HTTP_200_OK
+    return { "status": "ok" }
+
 @app.post("/auth/register")
 async def register(user: _User):
     registered = register_user_if_not_exist(user)
