@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const SOCKET_URL = "https://codedex-hackathon.onrender.com/"; // Correcto
+const SOCKET_URL = "https://wavenet.up.railway.app/"; // Correcto
 const socket = io(SOCKET_URL, {
   transports: ["websocket"], // Forzar WebSocket
   autoConnect: true,

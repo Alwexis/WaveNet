@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
 
     const getChats = async (accessToken) => {
         if (!accessToken) return;
-        const _ = await fetch("https://codedex-hackathon.onrender.com/chats", {
+        const _ = await fetch("https://wavenet.up.railway.app/chats", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     const getUserLikes = async (accessToken) => {
-        const _ = await fetch("https://codedex-hackathon.onrender.com/likes/user", {
+        const _ = await fetch("https://wavenet.up.railway.app/likes/user", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
 
     /*
     const getFriends = async (accessToken) => {
-        const _ = await fetch("https://codedex-hackathon.onrender.com/friends", {
+        const _ = await fetch("https://wavenet.up.railway.app/friends", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }) => {
     */
 
     const refreshUser = async () => {
-        const _ = await fetch("https://codedex-hackathon.onrender.com/auth/user", {
+        const _ = await fetch("https://wavenet.up.railway.app/auth/user", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -97,7 +97,7 @@ export const AuthProvider = ({ children }) => {
                 return;
             }
             try {
-                const _ = await fetch("https://codedex-hackathon.onrender.com/auth/user", {
+                const _ = await fetch("https://wavenet.up.railway.app/auth/user", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

@@ -29,7 +29,7 @@ export default function Home() {
     if (downloadingWavebond) return;
     try {
       setDownloadingWavebond(true);
-      const response = await fetch(`https://codedex-hackathon.onrender.com/wavebond/`, {
+      const response = await fetch(`https://wavenet.up.railway.app/wavebond/`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${firebaseUser.accessToken}`
@@ -74,7 +74,7 @@ export default function Home() {
       const formData = new FormData();
       formData.append("file", wavebond);
 
-      const _rawR = await fetch(`https://codedex-hackathon.onrender.com/wavebond/`, {
+      const _rawR = await fetch(`https://wavenet.up.railway.app/wavebond/`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${firebaseUser.accessToken}`

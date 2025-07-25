@@ -15,7 +15,7 @@ export default function MyPosts({ refresh, onRefreshComplete, onNotification }) 
         setLoading(true);
         try {
             const response = await fetch(
-                `https://codedex-hackathon.onrender.com/posts/?user=${user.uid}`,
+                `https://wavenet.up.railway.app/posts/?user=${user.uid}`,
                 {
                     method: "GET",
                     headers: {
@@ -46,7 +46,7 @@ export default function MyPosts({ refresh, onRefreshComplete, onNotification }) 
 
     const onPostDelete = async () => {
         try {
-            const _r = await fetch(`https://codedex-hackathon.onrender.com/post/${postBeingDeleted}`, {
+            const _r = await fetch(`https://wavenet.up.railway.app/post/${postBeingDeleted}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
